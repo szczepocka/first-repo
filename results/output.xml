@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.6 on win32)" generated="20230221 10:52:01.596" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot" source="C:\Users\szczepoc\Desktop\Robot">
+<suite id="s1-s1" name="Test1" source="C:\Users\szczepoc\Desktop\Robot\test1.robot">
+<test id="s1-s1-t1" name="1st Test" line="25">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${text_variable}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230221 10:52:01.646" endtime="20230221 10:52:01.649"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>@{list_users}</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20230221 10:52:01.650" level="FAIL">Keyword 'BuiltIn.Log To Console' expected 1 to 4 arguments, got 5.</msg>
+<status status="FAIL" starttime="20230221 10:52:01.649" endtime="20230221 10:52:01.650"/>
+</kw>
+<tag>first</tag>
+<status status="FAIL" starttime="20230221 10:52:01.644" endtime="20230221 10:52:01.653">Keyword 'BuiltIn.Log To Console' expected 1 to 4 arguments, got 5.</status>
+</test>
+<test id="s1-s1-t2" name="2nd Test" line="30">
+<kw name="Log To Console" library="BuiltIn">
+<arg>@{list_ids}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230221 10:52:01.657" endtime="20230221 10:52:01.658"/>
+</kw>
+<tag>second</tag>
+<status status="PASS" starttime="20230221 10:52:01.656" endtime="20230221 10:52:01.659"/>
+</test>
+<test id="s1-s1-t3" name="3rd Test" line="35">
+<kw name="My New Keyword">
+<arg>123</arg>
+<arg>test with kwd</arg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${number}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230221 10:52:01.663" endtime="20230221 10:52:01.663"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${number}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230221 10:52:01.664" level="INFO">123</msg>
+<status status="PASS" starttime="20230221 10:52:01.664" endtime="20230221 10:52:01.665"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${text}</arg>
+<arg>level=ERROR</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230221 10:52:01.666" level="ERROR">test with kwd</msg>
+<status status="PASS" starttime="20230221 10:52:01.665" endtime="20230221 10:52:01.681"/>
+</kw>
+<status status="PASS" starttime="20230221 10:52:01.662" endtime="20230221 10:52:01.682"/>
+</kw>
+<tag>third</tag>
+<status status="PASS" starttime="20230221 10:52:01.661" endtime="20230221 10:52:01.683"/>
+</test>
+<test id="s1-s1-t4" name="4th Test" line="39">
+<kw name="My New Keyword">
+<arg>222</arg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${number}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230221 10:52:01.688" endtime="20230221 10:52:01.689"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${number}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230221 10:52:01.690" level="INFO">222</msg>
+<status status="PASS" starttime="20230221 10:52:01.689" endtime="20230221 10:52:01.691"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${text}</arg>
+<arg>level=ERROR</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230221 10:52:01.692" level="ERROR">default</msg>
+<status status="PASS" starttime="20230221 10:52:01.691" endtime="20230221 10:52:01.694"/>
+</kw>
+<status status="PASS" starttime="20230221 10:52:01.687" endtime="20230221 10:52:01.695"/>
+</kw>
+<tag>fourth</tag>
+<status status="PASS" starttime="20230221 10:52:01.686" endtime="20230221 10:52:01.695"/>
+</test>
+<doc>This is my first robot test.</doc>
+<status status="FAIL" starttime="20230221 10:52:01.637" endtime="20230221 10:52:01.704"/>
+</suite>
+<status status="FAIL" starttime="20230221 10:52:01.604" endtime="20230221 10:52:01.710"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">first</stat>
+<stat pass="1" fail="0" skip="0">fourth</stat>
+<stat pass="1" fail="0" skip="0">second</stat>
+<stat pass="1" fail="0" skip="0">third</stat>
+</tag>
+<suite>
+<stat pass="3" fail="1" skip="0" id="s1" name="Robot">Robot</stat>
+<stat pass="3" fail="1" skip="0" id="s1-s1" name="Test1">Robot.Test1</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230221 10:52:01.578" level="ERROR">Error in file 'C:\Users\szczepoc\Desktop\Robot\test1.robot' on line 2: Non-existing setting 'Library SeleniumLibrary'.</msg>
+<msg timestamp="20230221 10:52:01.666" level="ERROR">test with kwd</msg>
+<msg timestamp="20230221 10:52:01.692" level="ERROR">default</msg>
+</errors>
+</robot>
